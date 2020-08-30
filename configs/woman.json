@@ -15,7 +15,7 @@
   "style_layer": ["block1_conv2", "block2_conv2", "block3_conv3", "block4_conv3"],
 
   "style_image_path": "./examples/style_img/woman.jpg",
-  "train_image_path": "../data",
+  "train_image_path": "./data",
   "test_image_path": "./examples/content_img/image.jpg",
   "test_res_save_path": "./test_results/woman/",
 
