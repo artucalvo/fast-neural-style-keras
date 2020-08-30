@@ -146,7 +146,7 @@ def train(options):
                     c_loss = print_test_results(res, iters, c_loss)
 
                     output = deprocess_image(res[6][0], width, height)
-                    imsave(options["test_res_save_path"] + '%d_%d_output.jpg' % (i, iters), output)
+                    imwrite(options["test_res_save_path"] + '%d_%d_output.jpg' % (i, iters), output)
 
                 if iters >= options["steps_per_epoch"]:
                     break
@@ -282,7 +282,7 @@ def temp_view(options, img_read_path, img_write_path, iters):
     else:
         res = training_model.predict([x, content_act, style_acts[0], style_acts[1], style_acts[2], style_acts[3]])
     output = deprocess_image(res[6][0], width, height)
-    imsave(img_write_path, output)
+    imwrite(img_write_path, output)
 
 
 def predict(options, img_read_path, img_write_path):
